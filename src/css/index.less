@@ -2,3 +2,36 @@
 @import "../bootstrap/less/bootstrap.less";
 
 // custom styles
+body {
+  background: #ADD8E6;
+}
+
+// navbar
+.navbar-que-web {
+  .navbar-default;
+
+  // make it transparent
+  background: transparent;
+  border-color: transparent;
+
+  // navbar nav links on right
+  ul.navbar-nav {
+    li {
+      &.active {
+        font-weight: bold;
+        a, a:hover { background-color: transparent; }
+      }
+    }
+  }
+}
+
+// all hero jumbotrons should be transparent
+.jumbotron { 
+  background: transparent; 
+  color: #FFF;
+
+  .right {
+    .pull-right;
+    margin-top: 32px;
+  }
+}
