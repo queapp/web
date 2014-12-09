@@ -6386,11 +6386,22 @@ fieldset[disabled] .navbar-que-web .btn-link:hover,
 fieldset[disabled] .navbar-que-web .btn-link:focus {
   color: #cccccc;
 }
+.navbar-que-web .navbar-brand,
+.navbar-que-web .navbar-nav li a {
+  color: #FFF;
+}
 .navbar-que-web ul.navbar-nav li.active {
   font-weight: bold;
 }
-.navbar-que-web ul.navbar-nav li.active a,
+.navbar-que-web ul.navbar-nav li.active a {
+  color: #eeeeee;
+  background-color: transparent;
+}
 .navbar-que-web ul.navbar-nav li.active a:hover {
+  background-color: transparent;
+}
+.navbar-que-web ul.navbar-nav li a:hover {
+  color: #777777;
   background-color: transparent;
 }
 .jumbotron {

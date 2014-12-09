@@ -14,12 +14,25 @@ body {
   background: transparent;
   border-color: transparent;
 
+  // cnage navbar colors
+  .navbar-brand, .navbar-nav li a {
+    color: #FFF;
+  }
+
   // navbar nav links on right
   ul.navbar-nav {
     li {
       &.active {
         font-weight: bold;
-        a, a:hover { background-color: transparent; }
+        a { 
+          color: @gray-lighter;
+          background-color: transparent; 
+        }
+        a:hover { background-color: transparent; }
+      }
+      a:hover { 
+        color: @gray-light;
+        background-color: transparent; 
       }
     }
   }
