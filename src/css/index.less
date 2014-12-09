@@ -1,9 +1,16 @@
 // bootstrap
 @import "../bootstrap/less/bootstrap.less";
 
-// custom styles
-body {
+// variables
+@section-background: #FFF;
+
+h1 {
+  font-weight: lighter;
+}
+
+.hero-image {
   background: #ADD8E6;
+  padding-bottom: 64px;
 }
 
 // navbar
@@ -44,7 +51,32 @@ body {
   color: #FFF;
 
   .right {
-    .pull-right;
-    margin-top: 32px;
+    .make-md-column(12);
+    margin-top: 24px;
+
+    h1, p { text-align: center; }
+  }
+}
+
+// section of content
+section {
+  .container;
+  background-color: @section-background;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &:first-child {
+    padding-bottom: 0px;
+  }
+
+  // section header
+  h1 {
+    text-align: center;
+    font-size: @font-size-base * 2.8;
+    padding-bottom: 12px;
+  }
+
+  p {
+    font-size: @font-size-base * 1.15;
   }
 }
