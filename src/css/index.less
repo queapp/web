@@ -1,3 +1,8 @@
+// out: index.css
+
+// fonts
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
 // bootstrap
 @import "../bootstrap/less/bootstrap.less";
 
@@ -6,11 +11,14 @@
 
 h1, h2, h3, h4, h5 {
   font-weight: lighter;
+  // color: #ecf0f1;
 }
 
 .hero-image {
-  background: #ADD8E6;
+  background: #59ABE3;
   padding-bottom: 64px;
+
+  border-bottom: 1px solid @gray-lighter;
 }
 
 // navbar
@@ -31,23 +39,23 @@ h1, h2, h3, h4, h5 {
     li {
       &.active {
         font-weight: bold;
-        a { 
+        a {
           color: @gray-lighter;
-          background-color: transparent; 
+          background-color: transparent;
         }
         a:hover { background-color: transparent; }
       }
-      a:hover { 
+      a:hover {
         color: @gray-light;
-        background-color: transparent; 
+        background-color: transparent;
       }
     }
   }
 }
 
 // all hero jumbotrons should be transparent
-.jumbotron { 
-  background: transparent; 
+.jumbotron {
+  background: transparent;
   color: #FFF;
 
   .right {
@@ -73,7 +81,7 @@ section {
   h1 {
     text-align: center;
     font-size: @font-size-base * 2.8;
-    padding-bottom: 12px;
+    padding-bottom: 16px;
   }
 
   h2 {
@@ -83,7 +91,7 @@ section {
   }
 
   p {
-    font-size: @font-size-base * 1.15;
+    font-size: @font-size-base * 1.5;
     &>span {
       font-weight: bold;
     }
