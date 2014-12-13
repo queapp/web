@@ -6300,11 +6300,8 @@ h5 {
   background: #59ABE3;
   border-bottom: 1px solid #eeeeee;
   overflow-y: hidden;
-}
-@media (min-width: 1200px) {
-  .hero-image {
-    height: 100vh;
-  }
+  padding-bottom: 64px;
+  height: 50vh;
 }
 .navbar-que-web {
   background-color: #f8f8f8;
@@ -6487,7 +6484,7 @@ section:first-child {
 }
 section h1 {
   text-align: center;
-  font-size: 39.2px;
+  font-size: 44.8px;
   padding-bottom: 16px;
 }
 section h2 {
@@ -6496,7 +6493,7 @@ section h2 {
   padding-bottom: 8px;
 }
 section p {
-  font-size: 21px;
+  font-size: 23.8px;
 }
 section p > span {
   font-weight: bold;
@@ -6559,7 +6556,13 @@ section .btn-hero:hover {
   float: left;
   position: relative;
   padding: 32px 10px;
+  margin: 20px auto;
   overflow: hidden;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 .hero-window .inset,
 .hero-window .cursor {
@@ -6649,7 +6652,7 @@ section .btn-hero:hover {
     padding-left: 15px;
     padding-right: 15px;
     padding: 0px;
-    margin-left: -10px;
+    margin-left: -15px;
     margin-top: 0px;
   }
   .hero-window .inset > .navbar-header,

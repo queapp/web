@@ -54,11 +54,6 @@
             <!-- control freaks, coders, programmers, geeks, technophiles, power users, super users, makers -->
           </div>
 
-          <div class="hero-window">
-            <img class="inset inset-lg" src="src/img/dash.png"/>
-            <img src="/src/img/cursor.svg" class="cursor"/>
-          </div>
-
         </div>
       </div>
     </div>
@@ -68,10 +63,16 @@
       <h1>Yea, IoT Controllers already exist. But this is better.</h1>
       <p>
         Que is better that the average Internet of Things controller. With Que, anything with
-        a API can become a thing - this means most of the internet-connected products you use everyday including
+        a API can become a thing - this means many of the internet-connected products you use everyday including
         <a href="http://nest.com">Nest</a>, <a href="http://lono.io">Lono</a>, or <a href="http://spark.io">Spark</a>
-        and anything you make yourself can <span>easily be connected and working in a short period of time</span>.
+        and anything you make yourself can <span>easily be connected and working in a short period of time</span>, so you
+        don't have to pull out your hair doing something that should be easy.
       </p>
+
+      <div class="hero-window">
+        <img class="inset inset-lg" src="src/img/dash.png"/>
+        <img src="/src/img/cursor.svg" class="cursor"/>
+      </div>
     </section>
 
     <section>
@@ -108,7 +109,7 @@
     <script src="src/bootstrap/js/bootstrap.min.js"></script>
 
     <script>
-      var topOffset, leftOffset;
+      var topOffset, leftOffset, windowDone;
 
       // 1 is biggest
       // 3 is smallest
@@ -166,9 +167,24 @@
         };
       };
 
-      $(document).ready(function() {
-        // start with a delay
-        setTimeout(startCursor, 1000);
+      // is the element fully visible?
+      var isScrolledIntoView = function(elem) {
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
+
+        var elemTop = $(elem).offset().top;
+        var elemBottom = elemTop + $(elem).height();
+
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+      }
+
+
+      $(window).scroll(function() {
+        if ( !windowDone && isScrolledIntoView($(".hero-window")) ) {
+          // start with a delay
+          setTimeout(startCursor, 1000);
+          windowDone = true;
+        }
       });
     </script>
 

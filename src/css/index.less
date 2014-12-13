@@ -18,8 +18,8 @@ h1, h2, h3, h4, h5 {
   background: #59ABE3;
   border-bottom: 1px solid @gray-lighter;
   overflow-y: hidden;
-
-  @media (min-width: @screen-lg-min) { height: 100vh; }
+  padding-bottom: 64px;
+  height: 50vh;
 }
 
 // navbar
@@ -83,7 +83,7 @@ section {
   // section headers
   h1 {
     text-align: center;
-    font-size: @font-size-base * 2.8;
+    font-size: @font-size-base * 3.2;
     padding-bottom: 16px;
   }
 
@@ -94,7 +94,7 @@ section {
   }
 
   p {
-    font-size: @font-size-base * 1.5;
+    font-size: @font-size-base * 1.7;
     &>span {
       font-weight: bold;
     }
@@ -114,13 +114,20 @@ section {
   }
 }
 
-
+// the animated hero window
 .hero-window {
   // phones
   float: left;
   position: relative;
   padding: 32px 10px;
+  margin: 20px auto;
   overflow: hidden;
+
+  border: 1px solid @gray-lighter;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
 
   .inset, .cursor { display: none; }
 
@@ -171,7 +178,7 @@ section {
       .inset {
         .container;
         padding: 0px;
-        margin-left: -10px;
+        margin-left: -15px;
         margin-top: 0px;
       }
       .inset-lg { display: block; }
