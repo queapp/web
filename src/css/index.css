@@ -6023,7 +6023,9 @@ button.close {
 .modal-footer:before,
 .modal-footer:after,
 section:before,
-section:after {
+section:after,
+.hero-window:before,
+.hero-window:after {
   content: " ";
   display: table;
 }
@@ -6042,7 +6044,8 @@ section:after {
 .pager:after,
 .panel-body:after,
 .modal-footer:after,
-section:after {
+section:after,
+.hero-window:after {
   clear: both;
 }
 .center-block {
@@ -6298,8 +6301,13 @@ h5 {
 }
 .hero-image {
   background: #59ABE3;
-  padding-bottom: 64px;
   border-bottom: 1px solid #eeeeee;
+  overflow-y: hidden;
+}
+@media (min-width: 992px) {
+  .hero-image {
+    height: 100vh;
+  }
 }
 .navbar-que-web {
   background-color: #f8f8f8;
@@ -6420,6 +6428,8 @@ fieldset[disabled] .navbar-que-web .btn-link:focus {
 .jumbotron {
   background: transparent;
   color: #FFF;
+  padding: 0px;
+  margin-bottom: 0px;
 }
 .jumbotron .right {
   position: relative;
@@ -6427,6 +6437,7 @@ fieldset[disabled] .navbar-que-web .btn-link:focus {
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 24px;
+  margin-bottom: 78px;
 }
 @media (min-width: 992px) {
   .jumbotron .right {
@@ -6492,4 +6503,188 @@ section p {
 }
 section p > span {
   font-weight: bold;
+}
+section .btn-hero {
+  color: #ffffff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  font-size: 42px;
+  background: #59ABE3;
+  text-align: center;
+  margin: 0px auto;
+  width: 300px;
+  display: block;
+}
+section .btn-hero:hover,
+section .btn-hero:focus,
+section .btn-hero.focus,
+section .btn-hero:active,
+section .btn-hero.active,
+.open > .dropdown-togglesection .btn-hero {
+  color: #ffffff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+section .btn-hero:active,
+section .btn-hero.active,
+.open > .dropdown-togglesection .btn-hero {
+  background-image: none;
+}
+section .btn-hero.disabled,
+section .btn-hero[disabled],
+fieldset[disabled] section .btn-hero,
+section .btn-hero.disabled:hover,
+section .btn-hero[disabled]:hover,
+fieldset[disabled] section .btn-hero:hover,
+section .btn-hero.disabled:focus,
+section .btn-hero[disabled]:focus,
+fieldset[disabled] section .btn-hero:focus,
+section .btn-hero.disabled.focus,
+section .btn-hero[disabled].focus,
+fieldset[disabled] section .btn-hero.focus,
+section .btn-hero.disabled:active,
+section .btn-hero[disabled]:active,
+fieldset[disabled] section .btn-hero:active,
+section .btn-hero.disabled.active,
+section .btn-hero[disabled].active,
+fieldset[disabled] section .btn-hero.active {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+section .btn-hero .badge {
+  color: #337ab7;
+  background-color: #ffffff;
+}
+section .btn-hero:hover {
+  background: #43A0DF;
+}
+.hero-window {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  position: relative;
+  padding: 32px 10px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .hero-window {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .hero-window {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-window {
+    width: 1170px;
+  }
+}
+.hero-window > .navbar-header,
+.hero-window > .navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 768px) {
+  .hero-window > .navbar-header,
+  .hero-window > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.hero-window .inset-lg {
+  display: none;
+}
+@media (min-width: 992px) {
+  .hero-window {
+    background: url(/src/img/window.svg);
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    height: 300px;
+  }
+  .hero-window .inset {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .hero-window .inset > .navbar-header,
+  .hero-window .inset > .navbar-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+@media (min-width: 992px) and (min-width: 768px) {
+  .hero-window .inset {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  .hero-window .inset {
+    width: 970px;
+  }
+}
+@media (min-width: 992px) and (min-width: 1200px) {
+  .hero-window .inset {
+    width: 1170px;
+  }
+}
+@media (min-width: 992px) and (min-width: 768px) {
+  .hero-window .inset > .navbar-header,
+  .hero-window .inset > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-window {
+    background: url(/src/img/window-lg.svg);
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    height: 500px;
+  }
+  .hero-window .inset {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 0px;
+    margin-left: -10px;
+  }
+  .hero-window .inset > .navbar-header,
+  .hero-window .inset > .navbar-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .hero-window .inset-lg {
+    display: block;
+  }
+}
+@media (min-width: 1200px) and (min-width: 768px) {
+  .hero-window .inset {
+    width: 750px;
+  }
+}
+@media (min-width: 1200px) and (min-width: 992px) {
+  .hero-window .inset {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) and (min-width: 1200px) {
+  .hero-window .inset {
+    width: 1170px;
+  }
+}
+@media (min-width: 1200px) and (min-width: 768px) {
+  .hero-window .inset > .navbar-header,
+  .hero-window .inset > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.hero-window .cursor {
+  position: absolute;
 }
