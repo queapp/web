@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5 {
   border-bottom: 1px solid @gray-lighter;
   overflow-y: hidden;
 
-  @media (min-width: @screen-md-min) { height: 100vh; }
+  @media (min-width: @screen-lg-min) { height: 100vh; }
 }
 
 // navbar
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5 {
   .right {
     .make-md-column(12);
     margin-top: 24px;
-    margin-bottom: 78px;
+    margin-bottom: 48px;
 
     h1, p { text-align: center; }
   }
@@ -116,40 +116,71 @@ section {
 
 
 .hero-window {
-  .container;
+  // phones
   float: left;
   position: relative;
   padding: 32px 10px;
   overflow: hidden;
 
-  .inset-lg { display: none; }
+  .inset, .cursor { display: none; }
 
   @media (min-width: @screen-md-min) {
+    // smaller tablets
+    .container;
     background: url(/src/img/window.svg);
     background-repeat: no-repeat;
     background-position: center 0px;
-    height: 300px;
+    height: 225px;
 
     .inset {
-      .container;
+      display: block;
+      margin-left: 220px;
+      margin-top: -12px;
+      width: 500px;
+    }
+
+    .cursor {
+      display: block;
+      position: absolute;
+      left: 342px;
+      top: 24px;
     }
   }
 
   @media (min-width: @screen-lg-min) {
-    background: url(/src/img/window-lg.svg);
-    background-repeat: no-repeat;
-    background-position: center 0px;
-    height: 500px;
-
+    // medium size devices (laptops, big tablets)
     .inset {
-      .container;
-      padding: 0px;
-      margin-left: -10px;
+      display: block;
+      margin-left: 320px;
+      margin-top: -12px;
+      width: 500px;
     }
-    .inset-lg { display: block; }
-  }
 
-  .cursor {
-    position: absolute;
+    .cursor {
+      display: block;
+    }
+
+    @media (min-height: 750px) {
+      // big desktops
+      .container;
+      background: url(/src/img/window-lg.svg);
+      background-repeat: no-repeat;
+      background-position: center 0px;
+      height: 500px;
+
+      .inset {
+        .container;
+        padding: 0px;
+        margin-left: -10px;
+        margin-top: 0px;
+      }
+      .inset-lg { display: block; }
+
+      .cursor {
+        position: absolute;
+        left: 20px;
+        top: 36px;
+      }
+    }
   }
 }
