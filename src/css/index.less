@@ -19,7 +19,6 @@ h1, h2, h3, h4, h5 {
   border-bottom: 1px solid @gray-lighter;
   overflow-y: hidden;
   padding-bottom: 64px;
-  height: 50vh;
 }
 
 // navbar
@@ -123,12 +122,6 @@ section {
   margin: 20px auto;
   overflow: hidden;
 
-  border: 1px solid @gray-lighter;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -o-border-radius: 4px;
-
   .inset, .cursor { display: none; }
 
   @media (min-width: @screen-md-min) {
@@ -174,6 +167,12 @@ section {
       background-repeat: no-repeat;
       background-position: center 0px;
       height: 500px;
+
+      border: 1px solid @gray-lighter;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -o-border-radius: 4px;
 
       .inset {
         .container;
