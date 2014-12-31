@@ -6403,6 +6403,7 @@ fieldset[disabled] .navbar-que-web .btn-link:focus {
 .navbar-que-web .navbar-brand,
 .navbar-que-web .navbar-nav li a {
   color: #FFF;
+  font-size: 18.2px;
 }
 .navbar-que-web ul.navbar-nav li.active {
   font-weight: bold;
