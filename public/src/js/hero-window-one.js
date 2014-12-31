@@ -1,7 +1,7 @@
 // ============
 // This script animates the 1st hero window: the cursor that enables a thing
 // ============
-var topOffset, leftOffset, windowDone;
+var topOffset, leftOffset, heroWindowDone;
 
 // 1 is biggest
 // 3 is smallest
@@ -72,9 +72,9 @@ var isScrolledIntoView = function(elem) {
 
 
 $(window).scroll(function() {
-  if ( !windowDone && isScrolledIntoView($(".hero-window")) ) {
+  if ( !heroWindowDone && isScrolledIntoView($(".hero-window")) ) {
     // start with a delay
     setTimeout(startCursor, 1000);
-    windowDone = true;
+    heroWindowDone = true;
   }
 });
