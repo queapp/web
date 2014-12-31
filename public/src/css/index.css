@@ -6352,6 +6352,12 @@ h4,
 h5 {
   font-weight: lighter;
 }
+.wordfade-container {
+  cursor: pointer;
+}
+.wordfade-container:hover {
+  opacity: 0.5;
+}
 .hero-image {
   background: #59ABE3;
   border-bottom: 1px solid #eeeeee;

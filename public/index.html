@@ -54,7 +54,7 @@
 
           <div class="right">
             <h1>Introducing Que</h1>
-            <p>An Internet of Things Controller for Programmers</p>
+            <p class="wordfade-container">An Internet of Things Controller for <span class="wordfade">Makers</span></p>
             <!-- control freaks, coders, programmers, geeks, technophiles, power users, super users, makers -->
           </div>
 
@@ -138,6 +138,52 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="src/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+      var allChoices = [
+        "Makers",
+        "Control Freaks",
+        "Coders",
+        "Programmers",
+        "Geeks",
+        "Technophiles",
+        "Power Users",
+        "Super Users"
+      ], prevRandom = 0;
+      $(document).ready(function() {
+
+        newRandom = function() {
+          while (1) {
+            n = Math.floor(Math.random() * allChoices.length);
+            if (n !== prevRandom) {
+              prevRandom = n;
+              return n;
+            }
+          }
+        }
+
+        switchphrase = function(to) {
+          $(".wordfade-container").animate({opacity: 0}, 500, function() {
+            if (typeof to == "number") {
+              $("span.wordfade").html(allChoices[to]);
+            } else {
+              $("span.wordfade").html(allChoices[newRandom()]);
+            }
+            $(".wordfade-container").animate({opacity: 1}, 500);
+          });
+        };
+
+        nextSw = function(to) {
+          switchphrase(to);
+          time = Math.floor(Math.random() * 20000);
+          if (time < 5000) time = 5000;
+          setTimeout(nextSw, time)
+        }
+
+        $(".wordfade-container").on('click', switchphrase);
+        nextSw(0); // go to 1st choice
+      });
+    </script>
 
     <script src="src/js/hero-window-one.js"></script>
     <script src="src/js/hero-fan.js"></script>
