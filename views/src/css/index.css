@@ -6364,6 +6364,13 @@ h5 {
   overflow-y: hidden;
   padding-bottom: 64px;
 }
+.hero-image.no-byline {
+  height: 54px;
+  padding-bottom: 0px;
+}
+.hero-image.no-byline .navbar-que-web {
+  margin-bottom: 0px;
+}
 .navbar-que-web {
   background-color: #f8f8f8;
   border-color: #e7e7e7;

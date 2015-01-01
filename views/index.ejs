@@ -1,0 +1,129 @@
+<% include partials/header %>
+
+<!-- intro content -->
+<section>
+  <h1>Yea, IoT Controllers already exist. But this is better.</h1>
+  <p>
+    Que is better that the average Internet of Things controller. With Que, anything with
+    a API can become a thing - this means many of the internet-connected products you use everyday including
+    <a href="http://nest.com">Nest</a>, <a href="http://lono.io">Lono</a>, or <a href="http://spark.io">Spark</a>
+    and anything you make yourself can <span>easily be connected and working in a short period of time</span>, so you
+    don't have to pull out your hair doing something that should be easy.
+  </p>
+
+  <div class="hero hero-window">
+    <img class="inset inset-lg" src="src/img/dash.png"/>
+    <img src="/src/img/cursor.svg" class="cursor"/>
+  </div>
+</section>
+
+<!-- nlp -->
+<section>
+  <h1>Just say what you want, Que is listening</h1>
+  <p>
+    Que is listening to what you say - all you have to do is click the microphone,
+    and talk. Que will then perform your query, doing what ever you ask. And unlike
+    other systems, there is no pattern or rule to conform to - Que supports <span>natural
+    language</span>, which allows you speak what you want, unimpeaded.
+  </p>
+
+  <div class="hero hero-speaker">
+
+    <div class="speaker-bubble-one bubble bubble-left">
+      <span class="quote">Que, turn on the fan</span>
+    </div>
+
+    <img class="speaker-fan fan-blade" src="src/img/fanblade.svg"/>
+
+    <div class="speaker-bubble-two bubble bubble-right">
+      <span class="quote">Ok, the fan has been enabled.</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- spark core -->
+<section>
+  <h1>What Else?</h1>
+  <ul>
+    <li class="section">
+      <h2>Que supports the Spark Core</h2>
+      <p>
+        <img src="src/img/spark.png" class="pull-left" style="width: 200px;"/>
+        Que and Spark are the best way to automate your next project. With Que, your spark instantly has a ready-to-use
+        dashboard. <span>It doesn't even require any programming</span> to get started - both on the spark and within Que. Just follow
+        a simple wizard to link Que and the spark. And also, if you know some programming, your spark gains a simple javascript
+        api that's functional within the browser. More information about setting up a spark can be found <a href="http://1egoman.viewdocs.io/que-iot/addspark">here</a>.
+      </p>
+    </li>
+    <li class="section">
+      <h2>Unify all your devices with one app</h2>
+      <p>
+        Why does it make sense to control all of your devices, each from a seperate place?
+        Que lets all connected devices be on one screen, for ease of access.
+      </p>
+    </li>
+  </ul>
+</section>
+
+<section class="dark">
+  <h1>What are you waiting for?</h1>
+  <a class="btn btn-hero btn-lg" href="//github.com/queapp/core/releases">Download Que</a>
+</section>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="src/bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+  var allChoices = [
+    "Makers",
+    "Control Freaks",
+    "Coders",
+    "Programmers",
+    "Geeks",
+    "Technophiles",
+    "Power Users",
+    "Super Users"
+  ], prevRandom = 0;
+  $(document).ready(function() {
+
+    newRandom = function() {
+      while (1) {
+        n = Math.floor(Math.random() * allChoices.length);
+        if (n !== prevRandom) {
+          prevRandom = n;
+          return n;
+        }
+      }
+    }
+
+    switchphrase = function(to) {
+      $(".wordfade-container").animate({opacity: 0}, 500, function() {
+        if (typeof to == "number") {
+          $("span.wordfade").html(allChoices[to]);
+        } else {
+          $("span.wordfade").html(allChoices[newRandom()]);
+        }
+        $(".wordfade-container").animate({opacity: 1}, 500);
+      });
+    };
+
+    nextSw = function(to) {
+      switchphrase(to);
+      time = Math.floor(Math.random() * 20000);
+      if (time < 5000) time = 5000;
+      setTimeout(nextSw, time)
+    }
+
+    $(".wordfade-container").on('click', switchphrase);
+    nextSw(0); // go to 1st choice
+  });
+</script>
+
+<script src="src/js/hero-window-one.js"></script>
+<script src="src/js/hero-fan.js"></script>
+
+<% include partials/footer %>

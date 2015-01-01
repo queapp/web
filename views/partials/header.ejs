@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Que: The Internet of Things for Programmers</title>
+
+    <!-- Bootstrap -->
+    <link href="src/css/index.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="hero-image <%= byline || 'no-byline' %>">
+      <span id="forkongithub">
+        <a target="_blank" href="//github.com/queapp">Fork me on GitHub</a>
+      </span>
+
+      <!-- navbar -->
+      <nav class="navbar navbar-que-web" role="navigation">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Que</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="<%= page === 'Home' && 'active' %>"><a href=".">Home</a></li>
+              <li class="<%= page === 'Docs' && 'active' %>"><a href="/docs">Docs</a></li>
+              <li class="<%= page === 'Home' && 'active' %>"><a target="_blank" href="//github.com/queapp/">Github</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <!-- the hero image -->
+      <div class="jumbotron">
+        <div class="container">
+
+          <div class="right">
+            <h1><%= heroTitle %></h1>
+            <% if (byline) { %>
+            <p class="wordfade-container">
+              An Internet of Things Controller for <span class="wordfade">Makers</span>
+            </p>
+            <% } %>
+            <!-- control freaks, coders, programmers, geeks, technophiles, power users, super users, makers -->
+          </div>
+
+        </div>
+      </div>
+    </div>

@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/1egoman/que-web",
   "dependencies": {
-    "connect": "^3.3.3",
-    "serve-static": "^1.7.1"
+    "express": "^4.6.1",
+    "serve-static": "^1.7.1",
+    "ejs": "^1.0.0"
   }
 }
