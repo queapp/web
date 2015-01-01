@@ -33,12 +33,13 @@ app.get("/", function(req, res) {
 // documentation
 app.get("/docs/*", function(req, res) {
   // what file to get?
-  filename = req.url || "/docs/index";
+  filename = req.url.split("?")[0] || "/docs/index";
+  branch = req.query.b || req.query.branch || "master";
 
   if (filename.indexOf('.') === -1) {
     // normal documentation page
     filename += ".md";
-    request.get("https://raw.githubusercontent.com/queapp/core/master" + filename, function(status, resp, body) {
+    request.get("https://raw.githubusercontent.com/queapp/core/" + branch + filename, function(status, resp, body) {
       res.render("docs", {
         heroTitle: "",
         byline: false,
