@@ -6551,6 +6551,22 @@ section > .navbar-collapse {
 section:first-child {
   padding-bottom: 0px;
 }
+section.md,
+section.md p {
+  font-size: 19.6px;
+}
+section.md h2,
+section.md p h2,
+section.md h3,
+section.md p h3,
+section.md h4,
+section.md p h4,
+section.md h5,
+section.md p h5,
+section.md h6,
+section.md p h6 {
+  text-align: left;
+}
 section h1 {
   text-align: center;
   font-size: 44.8px;
