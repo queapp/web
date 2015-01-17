@@ -36,6 +36,18 @@ app.get("/docs/*", function(req, res) {
   filename = req.url.split("?")[0] || "/docs/index";
   branch = req.query.b || req.query.branch || "master";
 
+  // branch source updater
+  // basically, if the user specifies a branch, update
+  // all references on the page to reflect it
+  autoLinkToBranch = function(code, branch) {
+    // if on master or a branch isn't specified, do nothing
+    if (!branch || branch === "master") return code;
+
+    // otherwise, modify every file uri that matches /docs/.*
+    // and append it with a ?b=branch
+    return code.replace(/\/docs\/([\w\.-_]*)/gim, "/docs/$1?b="+branch);
+  }
+
   if (filename.indexOf('.') === -1) {
     // normal documentation page
     filename += ".md";
@@ -44,7 +56,7 @@ app.get("/docs/*", function(req, res) {
         heroTitle: "",
         byline: false,
         page: "Docs",
-        content: marked(body)
+        content: autoLinkToBranch(marked(body), branch)
       });
     });
   } else {
