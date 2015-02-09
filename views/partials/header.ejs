@@ -20,9 +20,21 @@
   </head>
   <body>
 
+    <!-- google anylytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-43715491-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
     <div class="hero-image <%= byline || 'no-byline' %>">
       <span id="forkongithub">
-        <a target="_blank" href="//github.com/queapp">Fork me on GitHub</a>
+        <a target="_blank" href="//github.com/queapp" onclick="ga('send', 'event', 'nav', 'click', 'nav click', 'github');">Fork me on GitHub</a>
       </span>
 
       <!-- navbar -->
@@ -42,9 +54,15 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li class="<%= page === 'Home' && 'active' %>"><a href="/">Home</a></li>
-              <li class="<%= page === 'Docs' && 'active' %>"><a href="/docs">Docs</a></li>
-              <li class="<%= page === 'Home' && 'active' %>"><a target="_blank" href="//github.com/queapp/">Github</a></li>
+              <li class="<%= page === 'Home' && 'active' %>">
+                <a onclick="ga('send', 'event', 'nav', 'click', 'nav click', 'home');" href="/">Home</a>
+              </li>
+              <li class="<%= page === 'Docs' && 'active' %>">
+                <a onclick="ga('send', 'event', 'nav', 'click', 'nav click', 'docs');" href="/docs">Docs</a>
+              </li>
+              <li class="<%= page === 'Home' && 'active' %>">
+                <a onclick="ga('send', 'event', 'nav', 'click', 'nav click', 'github');" target="_blank" href="//github.com/queapp/">Github</a>
+              </li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
