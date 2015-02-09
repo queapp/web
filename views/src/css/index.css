@@ -6023,7 +6023,9 @@ button.close {
 .modal-footer:before,
 .modal-footer:after,
 section:before,
-section:after {
+section:after,
+footer .wrapper:before,
+footer .wrapper:after {
   content: " ";
   display: table;
 }
@@ -6042,7 +6044,8 @@ section:after {
 .pager:after,
 .panel-body:after,
 .modal-footer:after,
-section:after {
+section:after,
+footer .wrapper:after {
   clear: both;
 }
 .center-block {
@@ -6934,4 +6937,75 @@ section ul .section {
   .hero-speaker .fan-blade.spinning {
     top: 120px;
   }
+}
+footer {
+  background: #222222;
+  color: #eeeeee;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 16.8px;
+}
+footer .wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  footer .wrapper {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  footer .wrapper {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  footer .wrapper {
+    width: 1170px;
+  }
+}
+footer .wrapper > .navbar-header,
+footer .wrapper > .navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 768px) {
+  footer .wrapper > .navbar-header,
+  footer .wrapper > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+footer .wrapper ul,
+footer .wrapper .cell {
+  list-style-type: none;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  footer .wrapper ul,
+  footer .wrapper .cell {
+    float: left;
+    width: 25%;
+  }
+}
+footer .wrapper ul li,
+footer .wrapper .cell li {
+  padding: 2px 0px;
+}
+footer .wrapper ul .title,
+footer .wrapper .cell .title {
+  font-size: 18.2px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+footer .wrapper ul .logo,
+footer .wrapper .cell .logo {
+  width: 60px;
+  margin: 10px 0px;
 }
