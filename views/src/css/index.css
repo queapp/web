@@ -6940,9 +6940,10 @@ section ul .section {
 }
 footer {
   background: #222222;
-  color: #eeeeee;
+  color: #b8b8b8;
   padding-top: 50px;
   padding-bottom: 40px;
+  margin-top: 120px;
   font-family: "Source Sans Pro", Arial, sans-serif;
   font-size: 16.8px;
 }
@@ -6998,14 +6999,25 @@ footer .wrapper ul li,
 footer .wrapper .cell li {
   padding: 2px 0px;
 }
+footer .wrapper ul li a,
+footer .wrapper .cell li a {
+  color: #b8b8b8;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+footer .wrapper ul li a:hover,
+footer .wrapper .cell li a:hover {
+  color: #d2d2d2;
+}
 footer .wrapper ul .title,
 footer .wrapper .cell .title {
   font-size: 18.2px;
   font-weight: bold;
   padding-bottom: 5px;
+  color: #d2d2d2;
 }
 footer .wrapper ul .logo,
 footer .wrapper .cell .logo {
   width: 60px;
-  margin: 10px 0px;
+  margin: 10px 0px 20px 0px;
 }
