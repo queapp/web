@@ -45,7 +45,7 @@ app.get("/docs/*", function(req, res) {
 
     // otherwise, modify every file uri that matches /docs/.*
     // and append it with a ?b=branch
-    return code.replace(/\/docs\/([\w\.-_]*)/gim, "/docs/$1?b="+branch);
+    return code.replace(/\/docs\/([\w\.\-_]*)/gim, "/docs/$1?b="+branch);
   }
 
   if (filename.indexOf('.') === -1) {
