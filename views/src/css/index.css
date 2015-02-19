@@ -6348,6 +6348,17 @@ footer .wrapper:after {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
   }
 }
+section.md table td > strong {
+  margin-top: 20px;
+  display: block;
+}
+section.md table td:first-child {
+  padding-right: 20px;
+}
+section.md table td:last-child,
+section.md table th:last-child {
+  padding-left: 20px;
+}
 h1,
 h2,
 h3,
